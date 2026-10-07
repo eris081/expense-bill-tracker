@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense and Bill Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Expense and Bill Tracker</h1>
+
+    <div class="container">
+
+        <h2>Add Daily Expense</h2>
+
+        <input type="text" id="expenseName" placeholder="Expense Name">
+
+        <input type="number" id="expenseAmount" placeholder="Amount">
+
+        <select id="expenseCategory">
+            <option value="">Select Category</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Education</option>
+            <option>Medical</option>
+            <option>Other</option>
+        </select>
+
+        <button onclick="addExpense()">Add Expense</button>
+
+        <h2>Expenses</h2>
+
+        <input type="text" id="searchExpense"
+               placeholder="Search Expense"
+               onkeyup="displayExpenses()">
+
+        <select id="filterCategory" onchange="displayExpenses()">
+            <option value="All">All Categories</option>
+            <option>Food</option>
+            <option>Travel</option>
+            <option>Shopping</option>
+            <option>Education</option>
+            <option>Medical</option>
+            <option>Other</option>
+        </select>
+
+        <div id="expenseList"></div>
+
+        <h3>Total Expenses: ₹<span id="totalExpense">0</span></h3>
+
+
+        <h2>Record Bill</h2>
+
+        <input type="text" id="billName" placeholder="Bill Name">
+
+        <input type="number" id="billAmount" placeholder="Bill Amount">
+
+        <input type="date" id="billDate">
+
+        <select id="billStatus">
+            <option value="Pending">Pending</option>
+            <option value="Paid">Paid</option>
+        </select>
+
+        <input type="text" id="paymentDetails"
+               placeholder="Payment Details">
+
+        <button onclick="addBill()">Add Bill</button>
+
+        <h2>Bills</h2>
+
+        <div id="billList"></div>
+
+        <h3>Pending Amount: ₹<span id="pendingAmount">0</span></h3>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
